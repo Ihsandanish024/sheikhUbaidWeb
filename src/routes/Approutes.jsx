@@ -2,7 +2,6 @@ import {BrowserRouter, Routes, Route } from "react-router";
 import Blogs from "../pages/Blogs";
 import BlogDetail from "../pages/BlogDetail";
 import AdminLogin from "../admin/pages/AdminLogin";
-import Dashboard from "../admin/pages/Dashboard";
 import Posts from "../admin/pages/posts";
 import AdminDashboard from "../admin/pages/Dashboard";
 import CreateBlog from "../admin/pages/CreateBlog";
@@ -18,7 +17,6 @@ const Approutes = () => {
     <Routes>
 
 <Route path="/admin/login" element={<AdminLogin />} />
-<Route path="/admin" element={<Dashboard />} />
 <Route path="/admin/posts" element={<Posts />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/blogs/:id" element={<BlogDetail />} />

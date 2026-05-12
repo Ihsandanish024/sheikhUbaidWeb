@@ -4,7 +4,7 @@ const AdminProtectedRoute = ({ children }) => {
   const token = localStorage.getItem("token");
 
   if (!token) {
-    return <Navigate to="/admin/login" replace />;
+    return <Navigate to="api/admin/login" replace />;
   }
 
   return children;
