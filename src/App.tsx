@@ -2,7 +2,7 @@
 
 import Approutes from "./routes/Approutes"
 
- function App() {
+ const App = () => {
   return<>
    <Approutes />;
   </>
