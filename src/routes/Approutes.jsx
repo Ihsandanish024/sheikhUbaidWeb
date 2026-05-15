@@ -12,7 +12,7 @@ import Portfolio from "../pages/Portfolio";
 
 
 
-const Approutes = () => {
+function Approutes() {
   return (
     <Routes>
 
@@ -20,7 +20,6 @@ const Approutes = () => {
 <Route path="/admin/posts" element={<Posts />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/blogs/:id" element={<BlogDetail />} />
-      <Route path="/amdin/dashboard" element={<AdminDashboard />} />
       <Route path="/portfolio" element={<Portfolio />} />
 
       <Route path="/admin/create" element={
