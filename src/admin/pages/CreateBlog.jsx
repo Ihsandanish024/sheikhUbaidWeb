@@ -16,7 +16,7 @@ const CreateBlog = () => {
 
     setLoading(true);
     try{
-      await createBlog({ title, content,status });
+      await createBlog(title, content, status);
       console.log("i am from create blog")
       navigate("/admin/dashboard"); // 🔥 go back
 

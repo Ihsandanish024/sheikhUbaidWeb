@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import Blogs from "../pages/Blogs";
 import BlogDetail from "../pages/BlogDetail";
 import AdminLogin from "../admin/pages/AdminLogin";
@@ -9,38 +9,53 @@ import EditBlog from "../admin/pages/EditBlog";
 import AdminProtectedRoute from "../admin/components/AdminProtectedRoute"
 import Portfolio from "../pages/Portfolio";
 
-
-
-
 function Approutes() {
   return (
     <Routes>
-
-<Route path="/admin/login" element={<AdminLogin />} />
-<Route path="/admin/posts" element={<Posts />} />
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route
+        path="/admin"
+        element={
+          <AdminProtectedRoute>
+            <AdminDashboard />
+          </AdminProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/posts"
+        element={
+          <AdminProtectedRoute>
+            <Posts />
+          </AdminProtectedRoute>
+        }
+      />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/blogs/:id" element={<BlogDetail />} />
       <Route path="/portfolio" element={<Portfolio />} />
-
-      <Route path="/admin/create" element={
-        <AdminProtectedRoute>
-          <CreateBlog />
-        </AdminProtectedRoute>
-        } 
-        />
-      <Route path="/admin/edit/:id" element={
-        <AdminProtectedRoute>
-          <EditBlog />
-        </AdminProtectedRoute>
-        } 
-        />
-      <Route path="/admin/dashboard" element={
-        <AdminProtectedRoute>
-          <AdminDashboard />
-        </AdminProtectedRoute>
-        } 
-        />
-
+      <Route
+        path="/admin/create"
+        element={
+          <AdminProtectedRoute>
+            <CreateBlog />
+          </AdminProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/edit/:id"
+        element={
+          <AdminProtectedRoute>
+            <EditBlog />
+          </AdminProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/dashboard"
+        element={
+          <AdminProtectedRoute>
+            <AdminDashboard />
+          </AdminProtectedRoute>
+        }
+      />
     </Routes>
   );
 };
