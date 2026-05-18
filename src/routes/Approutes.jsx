@@ -1,4 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
 import Blogs from "../pages/Blogs";
 import BlogDetail from "../pages/BlogDetail";
 import AdminLogin from "../admin/pages/AdminLogin";
@@ -6,12 +9,18 @@ import Posts from "../admin/pages/posts";
 import AdminDashboard from "../admin/pages/Dashboard";
 import CreateBlog from "../admin/pages/CreateBlog";
 import EditBlog from "../admin/pages/EditBlog";
-import AdminProtectedRoute from "../admin/components/AdminProtectedRoute"
+import AdminProtectedRoute from "../admin/components/AdminProtectedRoute";
 import Portfolio from "../pages/Portfolio";
 
 function Approutes() {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/blogs" element={<Blogs />} />
+      <Route path="/blogs/:id" element={<BlogDetail />} />
+      <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route
         path="/admin"
@@ -29,9 +38,6 @@ function Approutes() {
           </AdminProtectedRoute>
         }
       />
-      <Route path="/blogs" element={<Blogs />} />
-      <Route path="/blogs/:id" element={<BlogDetail />} />
-      <Route path="/portfolio" element={<Portfolio />} />
       <Route
         path="/admin/create"
         element={
