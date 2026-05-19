@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import {
   Menu,
   X,
@@ -7,7 +7,7 @@ import {
   BookOpen,
   Feather,
   Mic2,
-//   Speakerphone,
+  Volume2,
   Mail,
   Linkedin,
   Instagram,
@@ -48,7 +48,7 @@ const services = [
   {
     title: "Public Speaking & Pronunciation",
     description: "Accent coaching and polished delivery for live speech.",
-    // icon: Speakerphone,
+    icon: Volume2,
   },
 ];
 
@@ -182,7 +182,7 @@ const Home = () => {
       <main>
         <section className="relative overflow-hidden px-6 pt-12 pb-20 md:px-10 lg:pb-28">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-gradient-to-b from-amber-500/10 to-transparent blur-3xl" />
-          <div className="mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
+        <div className="mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
             <div className="relative z-10 flex-1">
               <span className="inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-2 text-sm text-amber-200 shadow-sm shadow-amber-400/10">
                 Arabic Teacher · Poet · Voice Artist
