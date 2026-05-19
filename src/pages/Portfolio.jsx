@@ -210,6 +210,18 @@ const Portfolio = () => {
           </div>
         </section>
       </main>
+
+      <footer className="border-t border-zinc-800/70 px-6 py-8 md:px-10 lg:px-12">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-sm text-zinc-400">© 2026 Noor Al-Qalam. All rights reserved.</p>
+          <div className="flex flex-wrap gap-4 text-sm text-zinc-300">
+            <Link to="/" className="transition hover:text-white">Home</Link>
+            <Link to="/blogs" className="transition hover:text-white">Blogs</Link>
+            <Link to="/about" className="transition hover:text-white">About</Link>
+            <Link to="/contact" className="transition hover:text-white">Contact</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

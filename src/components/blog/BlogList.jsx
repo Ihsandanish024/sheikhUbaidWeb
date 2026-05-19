@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import { getPublishedBlogs } from "../../services/blogApi";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
@@ -19,28 +20,46 @@ const BlogList = () => {
 
   return (
     <div>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogs.map((blog) => (
           <BlogCard key={blog._id} blog={blog} />
         ))}
       </div>
 
       {/* Pagination */}
-      <div className="flex gap-2 mt-8 justify-center">
-        {Array.from({ length: totalPages }, (_, i) => (
+      {totalPages > 1 && (
+        <div className="flex gap-2 mt-12 justify-center items-center">
           <button
-            key={i}
-            onClick={() => setPage(i + 1)}
-            className={`px-3 py-1 rounded ${
-              page === i + 1
-                ? "bg-white text-black"
-                : "bg-zinc-800 text-white"
-            }`}
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={page === 1}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-zinc-800 bg-zinc-900 text-zinc-300 transition hover:border-amber-300 hover:text-amber-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {i + 1}
+            <ChevronLeft className="h-4 w-4" />
           </button>
-        ))}
-      </div>
+
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i}
+              onClick={() => setPage(i + 1)}
+              className={`px-4 py-2 rounded-2xl text-sm font-semibold transition ${
+                page === i + 1
+                  ? "bg-amber-400 text-zinc-950"
+                  : "border border-zinc-800 bg-zinc-900 text-zinc-300 hover:border-amber-300 hover:text-amber-300"
+              }`}
+            >
+              {i + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+            disabled={page === totalPages}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-zinc-800 bg-zinc-900 text-zinc-300 transition hover:border-amber-300 hover:text-amber-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
