@@ -35,9 +35,16 @@ const About = () => {
               ← Back to Home
             </Link>
 
-            <h1 className="mt-8 text-5xl md:text-6xl font-semibold tracking-tight text-zinc-100">
-              About
-            </h1>
+            <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+              <img
+                src="/placeholder-profile.jpg"
+                alt="Profile placeholder"
+                className="h-28 w-28 rounded-full border border-amber-400/20 object-cover shadow-xl shadow-black/20 sm:h-32 sm:w-32"
+              />
+              <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-zinc-100">
+                About
+              </h1>
+            </div>
 
             <p className="text-zinc-400 mt-6 max-w-2xl text-base leading-8">
               A deeper look into my academic journey, expertise, and professional experience in Arabic language teaching, poetry, and voice artistry.

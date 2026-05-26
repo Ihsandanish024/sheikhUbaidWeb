@@ -45,8 +45,8 @@ const Contact = () => {
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="rounded-3xl border border-zinc-800 bg-zinc-950/90 p-6 transition hover:-translate-y-1">
                     <p className="text-sm text-amber-300/90">Email</p>
-                    <a href="mailto:info@arabicvoice.art" className="mt-3 block text-lg font-semibold text-zinc-100 hover:text-amber-300 transition">
-                      info@arabicvoice.art
+                    <a href="mailto:ubaidyousufzai9@gmail.com" className="mt-3 block text-lg font-semibold text-zinc-100 hover:text-amber-300 transition">
+                    ubaidyousufzai9@gmail.com
                     </a>
                   </div>
                   <div className="rounded-3xl border border-zinc-800 bg-zinc-950/90 p-6 transition hover:-translate-y-1">
@@ -57,7 +57,27 @@ const Contact = () => {
 
                 <div className="rounded-3xl border border-zinc-800 bg-zinc-950/90 p-6 transition hover:-translate-y-1">
                   <p className="text-sm text-amber-300/90">Phone</p>
-                  <p className="mt-3 text-lg font-semibold text-zinc-100">+966 5X XXX XXXX</p>
+                  <p className="mt-3 text-lg font-semibold text-zinc-100">03272413261</p>
+                  <div className="mt-6">
+                      <p className="text-sm text-amber-300/90">whattsapp no:</p>
+                      <p className="mt-3 text-lg font-semibold text-zinc-100">03480281550</p>
+                    
+                  </div>
+                </div>
+
+                <div className="rounded-3xl border border-zinc-800 bg-zinc-950/90 p-6 transition hover:-translate-y-1">
+                  <p className="text-sm uppercase tracking-[0.35em] text-amber-300/80">Connect</p>
+                  <div className="mt-4 space-y-3">
+                    <a href="https://youtube.com/channel/UChig7uLbEqv_lKk3HX6Ul8Q?si=liPA2dhzVbZ6EdIX" target="_blank" rel="noreferrer" className="block text-lg font-semibold text-zinc-100 hover:text-amber-300 transition">
+                      YouTube Channel
+                    </a>
+                    <a href="https://www.facebook.com/share/1AvHw9W3MG/" target="_blank" rel="noreferrer" className="block text-lg font-semibold text-zinc-100 hover:text-amber-300 transition">
+                      Facebook Page
+                    </a>
+                    <a href="https://www.linkedin.com/in/عبيدالرحمن-يوسف-زئي-2a893b296?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="block text-lg font-semibold text-zinc-100 hover:text-amber-300 transition">
+                      LinkedIn Profile
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -65,7 +85,7 @@ const Contact = () => {
                 <div className="rounded-3xl border border-zinc-800 bg-zinc-950/95 p-8">
                   <h2 className="text-2xl font-semibold text-zinc-100">Send a Request</h2>
                   <p className="mt-4 text-zinc-400 leading-7">
-                    Share your project details and I will follow up with a clear consultation and service proposal.
+                   you can contact me for any service matches my skills
                   </p>
                   <div className="mt-8 space-y-4">
                     <div className="rounded-3xl bg-zinc-900/95 p-4 text-zinc-300 transition hover:bg-zinc-800/95">
